@@ -5,15 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>a1123357 Data story_台中大里高齡人口樣態</title>
   <style>
-  body{
-        font-family:Arial,sans-serif; /* Set font */
-        font-Size:18px ; /*Set font size */
-      }
+    body {
+      font-family: Arial, sans-serif; /* 設定字體 */
+      font-size: 18px; /* 設定字體大小 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      height: 100vh; /* 全畫面高度 */
+      background-color: #f4f4f4; /* 背景色 */
+    }
+    .card {
+      width: 80%; /* 卡片寬度 */
+      background-color: white; /* 卡片背景色 */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 卡片陰影 */
+      border-radius: 10px; /* 圓角 */
+      padding: 20px; /* 內邊距 */
+      text-align: center; /* 文字置中 */
+    }
+    iframe {
+      margin-top: 20px; /* 與卡片內容間距 */
+    }
   </style>
 </head>
 <body>
-  <h1>此圖為臺中市大里區A11至A33的curve chart，呈現高齡人口的樣態</h1>
-  <h2>123</h2>
+  <div class="card">
+    <h1>臺中市大里區高齡人口樣態</h1>
+    <p>此圖為臺中市大里區 A11 至 A33 的 curve chart，呈現高齡人口的樣態。</p>
+  </div>
   <iframe src="https://plotdb.io/v/chart/37098" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
 </body>
 </html>
