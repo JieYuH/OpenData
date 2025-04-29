@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>台中市大里區人口分析</title>
     <style>
-        
+        /* 設定莫蘭迪色框框的樣式 */
         .description-box {
             background-color: #eae3d2; /* 莫蘭迪淺灰米色 */
             border: 2px solid #c5b8a5; /* 莫蘭迪灰棕色 */
@@ -18,18 +18,37 @@
             margin: 20px auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 輕微陰影效果 */
         }
-        h1 {
-            text-align: center;
-            color: #4f4f4f; /* 深灰字體顏色 */
+
+        /* 設定圖片容器的樣式 */
+        .image-container {
+            display: flex;
+            justify-content: space-between; /* 圖片之間均分空間 */
+            align-items: center; /* 垂直置中 */
+            gap: 20px; /* 圖片之間的間距 */
+            margin: 20px;
+        }
+
+        /* 設定圖片的樣式 */
+        .image-container img {
+            max-width: 48%; /* 確保每張圖片不會超過容器的一半寬度 */
+            height: auto; /* 保持圖片的比例 */
+            border: 2px solid #c5b8a5; /* 莫蘭迪邊框 */
+            border-radius: 10px; /* 圓角邊框 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
         }
     </style>
 </head>
 <body>
     <h1>台中市大里區人口分析</h1>
     <div class="description-box">
-        此分析圖表針對我的家鄉台中市大里區進行分析，分析年齡落在65~80歲，從社會經濟服務平台的數據進行分析。台中市大里區永隆里65~80歲人數落在1050人，與大里區平均人數1049.8差不多，
+        此分析圖表針對我的家鄉台中市大里區進行分析，左方的圖分析年齡落在65~80歲，右方則落在80歲以上，從社會經濟服務平台的數據進行分析。台中市大里區永隆里65~80歲人數落在1050人，與大里區平均人數1049.8差不多，不過比
+        台中市整體平均617人還要高出許多，而80歲以上也同樣比台中市整題平均還要來的高，顯示此區需要更多的資源，但同時代表非常有發展潛力。
     </div>
-    <iframe src="https://plotdb.io/v/chart/37332" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
-    <iframe src="https://plotdb.io/v/chart/37353" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+    <div class="image-container">
+        <!-- 第一張圖片 -->
+        <img src="https://via.placeholder.com/400x300?text=圖片1" alt="圖片1">
+        <!-- 第二張圖片 -->
+        <img src="https://via.placeholder.com/400x300?text=圖片2" alt="圖片2">
+    </div>
 </body>
 </html>
