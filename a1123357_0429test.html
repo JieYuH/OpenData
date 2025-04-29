@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>台中市大里區人口分析</title>
+    <style>
+        /* 定義莫蘭迪色框框的樣式 */
+        .description-box {
+            background-color: #eae3d2; /* 莫蘭迪淺灰米色 */
+            border: 2px solid #c5b8a5; /* 莫蘭迪灰棕色 */
+            color: #4f4f4f; /* 深灰字體顏色 */
+            padding: 20px;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 輕微陰影效果 */
+        }
+        h1 {
+            text-align: center;
+            color: #4f4f4f; /* 深灰字體顏色 */
+        }
+    </style>
 </head>
 <body>
     <h1>台中市大里區人口分析</h1>
-    <p>此分析圖表為動畫式的臺中市村里級熱圖，透過點擊縣市中的鄉鎮再顯示村里細節。資料以村里為主，但可選擇鄉鎮區塊的資料計算方式（加總或平均），亦可自由控制是否顯示鄉鎮區塊。</p>
+    <div class="description-box">
+        此分析圖表為動畫式的臺中市村里級熱圖，透過點擊縣市中的鄉鎮再顯示村里細節。
+        資料以村里為主，但可選擇鄉鎮區塊的資料計算方式（加總或平均），亦可自由控制是否顯示鄉鎮區塊。
+    </div>
     <iframe src="https://plotdb.io/v/chart/37332" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
 </body>
 </html>
