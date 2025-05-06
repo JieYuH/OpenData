@@ -28,6 +28,45 @@
             margin-bottom: 20px;
         }
 
+        /* 設定圖片容器的樣式 */
+        .image-container {
+            margin-bottom: 20px;
+            border: 2px solid #c5b8a5; /* 莫蘭迪灰棕色小框框 */
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f4f1eb; /* 圖片背景色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+        }
+
+        /* 若是最後一張圖片，移除底部間距 */
+        .image-container:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 內嵌框架 (iframe) 的樣式 */
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+        }
+
+        /* 文字框樣式 */
+        .caption {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #4f4f4f;
+            text-align: center;
+        }
+
+        /* 標題樣式 */
+        h1 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #4f4f4f;
+        }
+
         /* 最下方獨立大框框樣式 */
         .final-footer {
             background-color: #eae3d2; /* 莫蘭迪淺灰米色 */
@@ -56,7 +95,7 @@
         /* 獨立框框文字樣式 */
         .footer-text {
             flex: 1;
-            margin-left: 20px;
+            margin-right: 20px;
             font-size: 16px;
             color: #4f4f4f;
             line-height: 1.6;
@@ -64,7 +103,7 @@
 
         /* 獨立框框圖片樣式 */
         .footer-content img {
-            max-width: 300px; /* 放大圖片寬度 */
+            max-width: 300px;
             height: auto;
             border-radius: 10px;
             border: 2px solid #c5b8a5;
@@ -79,6 +118,22 @@
             此分析圖對台中市65~79歲的人口進行分析，上方為男性，下方則為女性，從社會經濟服務平台的資料數據進行分析。先從整體分析，可以看出整體人口集中在市區附近(南屯、西區、北屯)
             這些區域本身就屬於台中市發展成熟、交通便利、醫療資源密集的地區，因此更容易吸引中高齡族群定居，且可以看出女性的高齡人口數多餘男性。雖然這些區域有成熟的資源，但隨著高齡化，
             高齡人口越來越多，也代表需要更多資源的注入，同時需思考其他區域人口外移的問題
+        </div>
+        <div class="image-container">
+            <!-- 第一張圖片 -->
+            <iframe src="https://plotdb.io/v/chart/37332" allowfullscreen="true"></iframe>
+            <div class="caption">男性65~79歲人口分布<br>
+                Q1:156,Q2:254,Q3:374.5
+                平均:284.4
+            </div>
+        </div>
+        <div class="image-container">
+            <!-- 第二張圖片 -->
+            <iframe src="https://plotdb.io/v/chart/37353" allowfullscreen="true"></iframe>
+            <div class="caption">女性65~79歲人口分布<br>
+                Q1:166,Q2:297,Q3:445.5
+                平均:333.3
+            </div>
         </div>
     </div>
 
