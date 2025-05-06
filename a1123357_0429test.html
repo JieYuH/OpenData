@@ -28,45 +28,6 @@
             margin-bottom: 20px;
         }
 
-        /* 設定圖片容器的樣式 */
-        .image-container {
-            margin-bottom: 20px;
-            border: 2px solid #c5b8a5; /* 莫蘭迪灰棕色小框框 */
-            padding: 10px;
-            border-radius: 10px;
-            background-color: #f4f1eb; /* 圖片背景色 */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
-        }
-
-        /* 若是最後一張圖片，移除底部間距 */
-        .image-container:last-child {
-            margin-bottom: 0;
-        }
-
-        /* 內嵌框架 (iframe) 的樣式 */
-        iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
-        }
-
-        /* 文字框樣式 */
-        .caption {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #4f4f4f;
-            text-align: center;
-        }
-
-        /* 標題樣式 */
-        h1 {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            color: #4f4f4f;
-        }
-
         /* 最下方獨立大框框樣式 */
         .final-footer {
             background-color: #eae3d2; /* 莫蘭迪淺灰米色 */
@@ -89,14 +50,13 @@
         /* 獨立框框內的文字與圖片組合 */
         .footer-content {
             display: flex;
-            justify-content: space-between;
             align-items: center;
         }
 
         /* 獨立框框文字樣式 */
         .footer-text {
             flex: 1;
-            margin-right: 20px;
+            margin-left: 20px;
             font-size: 16px;
             color: #4f4f4f;
             line-height: 1.6;
@@ -104,7 +64,7 @@
 
         /* 獨立框框圖片樣式 */
         .footer-content img {
-            max-width: 150px;
+            max-width: 300px; /* 放大圖片寬度 */
             height: auto;
             border-radius: 10px;
             border: 2px solid #c5b8a5;
@@ -120,35 +80,19 @@
             這些區域本身就屬於台中市發展成熟、交通便利、醫療資源密集的地區，因此更容易吸引中高齡族群定居，且可以看出女性的高齡人口數多餘男性。雖然這些區域有成熟的資源，但隨著高齡化，
             高齡人口越來越多，也代表需要更多資源的注入，同時需思考其他區域人口外移的問題
         </div>
-        <div class="image-container">
-            <!-- 第一張圖片 -->
-            <iframe src="https://plotdb.io/v/chart/37332" allowfullscreen="true"></iframe>
-            <div class="caption">男性65~79歲人口分布<br>
-                Q1:156,Q2:254,Q3:374.5
-                平均:284.4
-            </div>
-        </div>
-        <div class="image-container">
-            <!-- 第二張圖片 -->
-            <iframe src="https://plotdb.io/v/chart/37353" allowfullscreen="true"></iframe>
-            <div class="caption">女性65~79歲人口分布<br>
-                Q1:166,Q2:297,Q3:445.5
-                平均:333.3
-            </div>
-        </div>
     </div>
 
     <!-- 最下方的獨立框框 -->
     <div class="final-footer">
-        <h2>忘齡樂園</h2>
+        <h2>集點子提案:忘齡樂園</h2>
         <div class="footer-content">
+            <img src="pic.jpg" alt="忘齡樂園圖片">
             <div class="footer-text">
                 目前的遊樂園大多都是分為小朋友區與刺激區，但是並沒有專屬於年長者的遊樂空間，這些年長者到遊樂園只能當顧包包族。在我的家鄉台中大里區超過65歲但可以行動自如就有19842人，
                 在我的觀察中發現到有些年長者會不想出門，原因是行動不是那麼的靈活。從年長者的身體狀況出發去打造遊樂設施，在環境方面設施與設施之間可以增設座椅，聘請有醫療背景的來當工作人員，
                 讓年長者無憂無慮的遊玩。設施方面可降低刺激性，增加VR等互動性設施，與一旁的年長者一同合作闖關，打造出年長者的遊樂園，讓他們不再因為自己的年齡而駐足，重拾年輕活力，提升自信心
                 與願意出門多走走和社會交流的意願，讓年長者與社會接軌。
             </div>
-            <img src="pic.jpg" alt="忘齡樂園圖片">
         </div>
     </div>
 </body>
