@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>台中市大里區人口分析</title>
     <style>
-        /* 設定莫蘭迪色框框的樣式 */
+        /* 外部大框框樣式 */
+        .outer-container {
+            background-color: #faf8f5; /* 莫蘭迪淺米色背景 */
+            border: 3px solid #c5b8a5; /* 莫蘭迪灰棕色邊框 */
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 900px;
+            margin: 30px auto; /* 自動置中 */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 陰影效果 */
+        }
+
+        /* 設定說明文字的樣式 */
         .description-box {
             background-color: #eae3d2; /* 莫蘭迪淺灰米色 */
             border: 2px solid #c5b8a5; /* 莫蘭迪灰棕色 */
@@ -14,41 +25,56 @@
             border-radius: 10px;
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 20px auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 輕微陰影效果 */
+            margin-bottom: 20px;
         }
 
         /* 設定圖片容器的樣式 */
         .image-container {
-            display: flex;
-            justify-content: space-between; /* 圖片之間均分空間 */
-            align-items: center; /* 垂直置中 */
-            gap: 20px; /* 圖片之間的間距 */
-            margin: 20px;
+            margin-bottom: 20px;
+            border: 2px solid #c5b8a5; /* 莫蘭迪灰棕色小框框 */
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f4f1eb; /* 圖片背景色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
         }
 
-        /* 設定圖片的樣式 */
-        .image-container img {
-            max-width: 48%; /* 確保每張圖片不會超過容器的一半寬度 */
-            height: auto; /* 保持圖片的比例 */
-            border: 2px solid #c5b8a5; /* 莫蘭迪邊框 */
-            border-radius: 10px; /* 圓角邊框 */
+        /* 若是最後一張圖片，移除底部間距 */
+        .image-container:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 內嵌框架 (iframe) 的樣式 */
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+        }
+
+        /* 標題樣式 */
+        h1 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #4f4f4f;
         }
     </style>
 </head>
 <body>
-    <center><h1>台中市大里區人口分析</h1></center>
-    <div class="description-box">
-        此分析圖表針對我的家鄉台中市大里區進行分析，左方的圖分析年齡落在65~80歲，右方則落在80歲以上，從社會經濟服務平台的數據進行分析。台中市大里區永隆里65~80歲人數落在1050人，與大里區平均人數1049.8差不多，不過比
-        台中市整體平均617人還要高出許多，而80歲以上也同樣比台中市整題平均還要來的高，顯示此區需要更多的資源，但同時代表非常有發展潛力。
-    </div>
-    <div class="image-container">
-        <!-- 第一張圖片 -->
-        <iframe src="https://plotdb.io/v/chart/37332" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
-        <!-- 第二張圖片 -->
-        <iframe src="https://plotdb.io/v/chart/37353" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
+    <div class="outer-container">
+        <h1>台中市大里區人口分析</h1>
+        <div class="description-box">
+            此分析圖表針對我的家鄉台中市大里區進行分析，左方的圖分析年齡落在65~80歲，右方則落在80歲以上，從社會經濟服務平台的數據進行分析。台中市大里區永隆里65~80歲人數落在1050人，與大里區平均人數1049.8差不多，不過比
+            台中市整體平均617人還要高出許多，而80歲以上也同樣比台中市整體平均還要來的高，顯示此區需要更多的資源，但同時代表非常有發展潛力。
+        </div>
+        <div class="image-container">
+            <!-- 第一張圖片 -->
+            <iframe src="https://plotdb.io/v/chart/37332" allowfullscreen="true"></iframe>
+        </div>
+        <div class="image-container">
+            <!-- 第二張圖片 -->
+            <iframe src="https://plotdb.io/v/chart/37353" allowfullscreen="true"></iframe>
+        </div>
     </div>
 </body>
 </html>
