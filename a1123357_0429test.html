@@ -109,6 +109,31 @@
             border: 2px solid #c5b8a5;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
         }
+        /* 手機響應式樣式 */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column; /* 垂直排列圖片和文字 */
+                text-align: center;
+            }
+
+            .footer-text {
+                margin-left: 0; /* 移除圖片與文字的橫向間距 */
+                margin-top: 20px; /* 增加垂直間距 */
+            }
+
+            .footer-content img {
+                max-width: 100%; /* 圖片寬度改為佔滿容器 */
+                margin-bottom: 20px; /* 增加圖片與文字的間距 */
+            }
+
+            .image-container iframe {
+                height: 400px; /* 減少 iframe 高度以適應小螢幕 */
+            }
+
+            .caption {
+                font-size: 14px; /* 縮小字體以適應小螢幕 */
+            }
+        }
     </style>
 </head>
 <body>
