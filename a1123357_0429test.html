@@ -134,6 +134,15 @@
                 font-size: 14px; /* 縮小字體以適應小螢幕 */
             }
         }
+        /* 增加框框在滑鼠移到上面時的效果 */
+        .outer-container:hover,
+        .description-box:hover,
+        .image-container:hover,
+        .final-footer:hover {
+            transform: translateY(-10px); /* 框框向上移動 10px */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 過渡效果 */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 放大陰影效果 */
+        }
     </style>
 </head>
 <body>
