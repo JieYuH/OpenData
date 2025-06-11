@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=600, initial-scale=1.0">
+  <title>A1123357_黃婕瑜_Power BI個人專案</title>
+  <style>
+    body {
+      font-family: "Segoe UI", "微軟正黑體", Arial, sans-serif;
+      background: #e7e4e0;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: #d4cfc9;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(65, 63, 57, 0.12);
+      padding: 36px 36px 24px 36px;
+      max-width: 700px;
+      width: 90vw;
+      margin: 40px 0;
+      box-sizing: border-box;
+    }
+    h1 {
+      color: #7a7972;
+      font-weight: 700;
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+    .subtitle {
+      color: #b6ada5;
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 0 auto 10px auto;
+      border-radius: 10px;
+      border: 2px solid #c3beb6;
+      background: #f5f3f1;
+      box-shadow: 0 4px 12px rgba(122, 121, 114, 0.08);
+    }
+    @media (max-width: 660px) {
+      .container {
+        padding: 16px 4vw;
+      }
+      iframe {
+        width: 100% !important;
+        height: 340px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>A1123357 黃婕瑜 · Power BI 個人專案</h1>
+    <div class="subtitle">使用莫蘭迪色系設計 · 互動式 Power BI 儀表板展示</div>
+    <iframe title="A1123357_黃婕瑜_Power BI個人專案"
+            width="600" height="373.5"
+            src="https://app.powerbi.com/view?r=eyJrIjoiZDAxM2VlZmEtZWQwZS00Y2ExLThlZWQtMThiODZlNDBkYmExIiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D"
+            frameborder="0" allowFullScreen="true"></iframe>
+  </div>
+</body>
+</html>
