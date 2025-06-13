@@ -77,6 +77,15 @@
       background: #f5f3f1;
       box-shadow: 0 4px 12px rgba(122, 121, 114, 0.08);
     }
+    .footer-content {
+      margin-top: 24px;
+      background: #ece9e5;
+      border-radius: 8px;
+      padding: 16px;
+      color: #6d6a5e;
+      text-align: center;
+      min-height: 36px;
+    }
     @media (max-width: 660px) {
       .container {
         padding: 16px 4vw;
@@ -91,9 +100,7 @@
 <body>
   <h1>A1123357 黃婕瑜  Power BI 個人專案</h1>
   <div class="container">
-    <div class="description-box" id="descBox">
-      說明1：這是第1頁的說明內容。
-    </div>
+    <div class="description-box" id="descBox">說明1：這是第1頁的說明內容。</div>
     <div class="page-buttons">
       <button class="active" onclick="changePage(1)">1</button>
       <button onclick="changePage(2)">2</button>
@@ -101,13 +108,17 @@
       <button onclick="changePage(4)">4</button>
       <button onclick="changePage(5)">5</button>
     </div>
-    
-    <iframe title="A1123357_黃婕瑜_Power BI個人專案"
+    <iframe id="powerbiFrame"
+            title="A1123357_黃婕瑜_Power BI個人專案"
             width="600" height="373.5"
             src="https://app.powerbi.com/view?r=eyJrIjoiZDAxM2VlZmEtZWQwZS00Y2ExLThlZWQtMThiODZlNDBkYmExIiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
+    <div class="footer-content" id="footerContent">
+      這是第1頁的下方說明或補充內容。
+    </div>
   </div>
   <script>
+    // 這裡可自行設計每頁的說明、iframe src與下方內容
     const texts = [
       '說明1：這是第1頁的說明內容。',
       '說明2：這是第2頁的說明內容。',
@@ -115,12 +126,27 @@
       '說明4：這是第4頁的說明內容。',
       '說明5：這是第5頁的說明內容。'
     ];
+    const iframeSrcs = [
+      'https://app.powerbi.com/view?r=eyJrIjoiZDAxM2VlZmEtZWQwZS00Y2ExLThlZWQtMThiODZlNDBkYmExIiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D',
+      'https://app.powerbi.com/view?r=eyJrIjoiZm9vYmFyIiwidCI6ImFiYyIsImMiOjF9', // 範例，請換成你的第二頁 PowerBI 網址
+      'https://app.powerbi.com/view?r=eyJrIjoiYmFyYmF6IiwidCI6ImRlZiIsImMiOjF9', // 第三頁
+      'https://app.powerbi.com/view?r=eyJrIjoiYmF6cXV4IiwidCI6ImdoaSIsImMiOjF9', // 第四頁
+      'https://app.powerbi.com/view?r=eyJrIjoiY29ybmVyaWEiLCJ0IjoiamtsIiwicyI6MTAwfQ%3D%3D'  // 第五頁
+    ];
+    const footerContents = [
+      '這是第1頁的下方說明或補充內容。',
+      '這是第2頁的下方說明或補充內容。',
+      '這是第3頁的下方說明或補充內容。',
+      '這是第4頁的下方說明或補充內容。',
+      '這是第5頁的下方說明或補充內容。'
+    ];
     function changePage(page) {
       document.getElementById('descBox').textContent = texts[page - 1];
+      document.getElementById('powerbiFrame').src = iframeSrcs[page - 1];
+      document.getElementById('footerContent').textContent = footerContents[page - 1];
       document.querySelectorAll('.page-buttons button').forEach((btn, idx) => {
         btn.classList.toggle('active', idx === page - 1);
       });
-      // 若不同頁數要切換iframe，這裡可以加上對應src的切換
     }
   </script>
 </body>
