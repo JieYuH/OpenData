@@ -25,6 +25,36 @@
       margin: 40px 0;
       box-sizing: border-box;
     }
+    .description-box {
+      background: #fffbea;
+      border: 1.5px solid #d6cfc2;
+      border-radius: 8px;
+      padding: 18px 18px 12px 18px;
+      margin-bottom: 24px;
+      color: #7a7972;
+      font-size: 1.1rem;
+      min-height: 48px;
+      box-sizing: border-box;
+    }
+    .page-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .page-buttons button {
+      background: #b6ada5;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .page-buttons button.active {
+      background: #7a7972;
+    }
     h1 {
       color: #7a7972;
       font-weight: 700;
@@ -60,11 +90,37 @@
 </head>
 <body>
   <div class="container">
+    <div class="description-box" id="descBox">
+      說明1：這是第1頁的說明內容。
+    </div>
+    <div class="page-buttons">
+      <button class="active" onclick="changePage(1)">1</button>
+      <button onclick="changePage(2)">2</button>
+      <button onclick="changePage(3)">3</button>
+      <button onclick="changePage(4)">4</button>
+      <button onclick="changePage(5)">5</button>
+    </div>
     <h1>A1123357 黃婕瑜  Power BI 個人專案</h1>
     <iframe title="A1123357_黃婕瑜_Power BI個人專案"
             width="600" height="373.5"
             src="https://app.powerbi.com/view?r=eyJrIjoiZDAxM2VlZmEtZWQwZS00Y2ExLThlZWQtMThiODZlNDBkYmExIiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D"
             frameborder="0" allowFullScreen="true"></iframe>
   </div>
+  <script>
+    const texts = [
+      '說明1：這是第1頁的說明內容。',
+      '說明2：這是第2頁的說明內容。',
+      '說明3：這是第3頁的說明內容。',
+      '說明4：這是第4頁的說明內容。',
+      '說明5：這是第5頁的說明內容。'
+    ];
+    function changePage(page) {
+      document.getElementById('descBox').textContent = texts[page - 1];
+      document.querySelectorAll('.page-buttons button').forEach((btn, idx) => {
+        btn.classList.toggle('active', idx === page - 1);
+      });
+      // 若不同頁數要切換iframe，這裡可以加上對應src的切換
+    }
+  </script>
 </body>
 </html>
